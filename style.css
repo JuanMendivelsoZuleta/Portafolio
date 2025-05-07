@@ -2,12 +2,14 @@ body {
     background-color: 	#1d1c1c;
     color: #EDEDED;
 }
+
 /*----------Header----------*/
 header{
     color: #EDEDED;
 
 }
 nav{
+  font-family: "Open Sans", sans-serif;
    color: 	#EDEDED;
    display: flex;
    justify-content: center;
@@ -43,6 +45,7 @@ h2{
     margin-top: 0.5rem;
 }
 .about-text p{
+  font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -108,6 +111,7 @@ section{
 }
 
 .skills-container{
+  
     margin: 2px;
     padding: 2px;
     background-color: #333;
@@ -125,11 +129,13 @@ section{
 
 }
 .skills-container p{
+  
     margin: 2px;
     padding: 2px;
     
 }
 .container {
+
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -267,3 +273,75 @@ section{
     width: 18px;
     height: 18px;
   }
+/* ----------- Responsive Design ----------- */
+@media (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 90%;
+  }
+
+  .skills-text {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .container-project {
+    grid-template-columns: 1fr; /* Una sola columna en tablet */
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .line {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    gap: 1rem;
+  }
+
+  .about-img img {
+    max-width: 150px;
+  }
+
+  .skills-text {
+    flex-direction: column;
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+
+  .title-skill {
+    font-size: 1.5rem;
+  }
+  
+  .skills-container {
+    font-size: 18px;
+  }
+
+  .line {
+    width: 50%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .boton {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
